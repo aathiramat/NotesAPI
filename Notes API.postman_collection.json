@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "40064926-f85b-40ed-8a17-3a1877364324",
+		"name": "Notes API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31854348"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user2\",\r\n    \"password\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				},
+				"description": "POST /api/auth/signup :\n\nCreate a new user account."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user1\",\r\n    \"password\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "POST /api/auth/login  \n  \nLog in to an existing user account and receive an access token."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmNWI1ODdkNGU2MWJkMzEzNDQ4ZmYiLCJpYXQiOjE3MDI4NDU0MjEsImV4cCI6MTcwMjg0OTAyMX0.K3rLIa9OsNJrmbid5Lb2_7c4WjIxFCvZkMwAD4B5l9Y",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"For a user\",\r\n    \"content\": \"This is a note for user2!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes"
+					]
+				},
+				"description": "POST /api/notes\n\nCreate a new note for the authenticated user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmNWI1ODdkNGU2MWJkMzEzNDQ4ZmYiLCJpYXQiOjE3MDI4NDU0MjEsImV4cCI6MTcwMjg0OTAyMX0.K3rLIa9OsNJrmbid5Lb2_7c4WjIxFCvZkMwAD4B5l9Y",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						""
+					]
+				},
+				"description": "GET /api/notes  \n  \nGet a list of all notes for the authenticated user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes/657fd305bd7637c05d983176",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmZDI2YWJkNzYzN2MwNWQ5ODMxNzMiLCJpYXQiOjE3MDI4NzU3NzIsImV4cCI6MTcwMjg3OTM3Mn0.gHd4sZGw9LAbs_cJ-x3rcv15DxIeM_4bLhim0Vhpd8E",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"NewNote1\",\r\n    \"content\": \"This is a test note!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes/657fd305bd7637c05d983176",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"657fd305bd7637c05d983176"
+					]
+				},
+				"description": "GET /api/notes/:id  \n  \nGet a note by ID for the authenticated user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes/657fd418bd7637c05d98317f",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmNTFkOWZkNDllZTY5M2JlMWJmMzIiLCJpYXQiOjE3MDI4NTAyNDMsImV4cCI6MTcwMjg1Mzg0M30.fTgOJdy06HuhneXrnt0hyDtBt9bybO8dfhF_uZ1Ed78",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Aathira Note\",\r\n    \"content\": \"This is a note for Ebin!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes/657f5bd47d4e61bd31344904",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"657f5bd47d4e61bd31344904"
+					]
+				},
+				"description": "PUT /api/notes/:id  \n  \nUpdate an existing note by ID for the authenticated user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes/657f4ffc8dd3469fd00232e6",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmMzg5NGNmNjIyNzgzMDM2OWU1ODEiLCJpYXQiOjE3MDI4NDIwMTAsImV4cCI6MTcwMjg0NTYxMH0.WgigE4VDK-93xmRuDfU3SqPfV1r_fUC8-38Pyrf9iIE",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"NewNote1\",\r\n    \"content\": \"This is a test note!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes/657f4ffc8dd3469fd00232e6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"657f4ffc8dd3469fd00232e6"
+					]
+				},
+				"description": "DELETE /api/notes/:id  \n  \nDelete a note by ID for the authenticated user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes/657fd418bd7637c05d98317f/share",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmNTFkOWZkNDllZTY5M2JlMWJmMzIiLCJpYXQiOjE3MDI4NDk1MzQsImV4cCI6MTcwMjg1MzEzNH0.mknbMkoG91OUkOjfuLRF7p-tzbgJ7OlkiR06n0oQl4E",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes/657f5227fd49ee693be1bf35/share",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"657f5227fd49ee693be1bf35",
+						"share"
+					]
+				},
+				"description": "POST /api/notes/:id/share  \n  \nShare a note with another user for the authenticated user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes/search?q=user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmNTFkOWZkNDllZTY5M2JlMWJmMzIiLCJpYXQiOjE3MDI4NDk1MzQsImV4cCI6MTcwMjg1MzEzNH0.mknbMkoG91OUkOjfuLRF7p-tzbgJ7OlkiR06n0oQl4E",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes/search?q=user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "user"
+						}
+					]
+				},
+				"description": "GET /api/search?q=:query  \n  \nSearch for notes based on keywords for the authenticated user."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/notes/shared",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdmNWI1ODdkNGU2MWJkMzEzNDQ4ZmYiLCJpYXQiOjE3MDI4NDU0MjEsImV4cCI6MTcwMjg0OTAyMX0.K3rLIa9OsNJrmbid5Lb2_7c4WjIxFCvZkMwAD4B5l9Y",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/notes/shared",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"shared"
+					]
+				},
+				"description": "GET /api/notes/shared  \n  \nGet list of all shared notes to the user."
+			},
+			"response": []
+		}
+	]
+}
